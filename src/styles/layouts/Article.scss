@@ -1,0 +1,104 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+//------------------Article---------------------
+.article {
+  background-color: #8b8689;
+  display: flex;
+  flex-direction: column;
+  form {
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  li {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #23231F;
+  }
+  input[type="text"],
+  input[readonly=""] {
+    margin: 0.4rem 1rem 0.4rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    padding-left: 1rem;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    &:focus {
+      outline: none;
+    }
+  }
+  input[type="text"]:focus {
+    border: 0.2rem solid #c9ecb7;
+  }
+  input[type="checkbox"] {
+    /* position: absolute; */
+    top: 1.2rem;
+    left: 1rem;
+    appearance: none;
+    cursor: pointer;
+    background-color: #fff;
+    border: 0.2rem solid $colorPrimary;
+    border-radius: 0.2em;
+    width: 1.8rem;
+    height: 1.8rem;
+    &:checked {
+      background-color: #ad95c8;
+      & + input {
+        color: #ad95c8;
+        text-decoration: line-through;
+      }
+    }
+  }
+  #addTodo {
+    background: radial-gradient(circle,  #f2ecf8,  #D5C0E9, #AD9DBC);
+    @include textBackground;
+    &:hover {
+      background:#f2ecf8;
+      @include textBackground;
+    }
+  }
+  #edit {
+    background: radial-gradient(circle, #d0efc1, #B6DBA3, #96d876);
+    @include textBackground;
+    &:hover {
+      background: #d0efc1;
+      @include textBackground;
+    }
+  }
+  #save {
+    background: radial-gradient(circle, #d0efc1, #B6DBA3, #96d876);
+    margin-left: 1rem;
+    @include textBackground;
+    &:hover {
+      background: #d0efc1;
+      @include textBackground;
+    }
+  }
+  #supr {
+    background: radial-gradient(circle, #ffaaaa, #d46a6a);
+    margin: 0.5rem 1rem;
+    @include textBackground;
+    &:hover {
+      background: #ffaaaa;
+      @include textBackground;
+    }
+  }
+  #cancel {
+    margin: 0.5rem 1rem;
+    background: radial-gradient(circle, #ffaaaa, #d46a6a);
+    @include textBackground;
+    &:hover {
+      background: #ffaaaa;
+      @include textBackground;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+//------------------General---------------------
+html {
+  font-size: 62.5%;
+scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Cream", sans-serif;
+  font-size: $font-size;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    font-size: $fontSizeHead1;
+}
+
+h2 {
+  font-size: $fontSizeHead2;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+h3 {
+    font-size: $fontSizeHead3;
+    text-align: left;
+    margin-left: 6rem;
+}
+
+ button {
+   border-radius: 1rem;
+   font-weight: 900;
+   padding: 0.3rem 1rem;
+   border: none;
+      cursor: pointer;
+      }
+
+p {
+  text-indent: 2rem;
+  text-align: justify;
+  line-height: 3rem;
+  padding: 2rem;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+}
