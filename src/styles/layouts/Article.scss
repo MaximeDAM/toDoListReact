@@ -3,10 +3,22 @@
 
 //------------------Article---------------------
 .article {
-  background-color: #8b8689;
+  border-radius: 1rem;
+  background-color: #374151;
   display: flex;
   flex-direction: column;
+  padding: 4rem 0 2rem 0;
   form {
+    width: 38%;
+    height: 4.8rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input[type="text"] {
+      margin: 0;
+      width: 75%;
+    }
   }
   ul {
     display: flex;
@@ -16,12 +28,22 @@
     padding-left: 0;
   }
   li {
+    height: 3.8rem;
     width: 70%;
+    margin-top: 1.2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 1rem;
-    background-color: #23231F;
+    background-color: #101826;
+    cursor: pointer;
+    input[type="text"] {
+      margin-left: 5rem;
+    }
+  }
+  .actions {
+    display: flex;
+    width: 28%;
   }
   input[type="text"],
   input[readonly=""] {
@@ -32,17 +54,31 @@
     background-color: transparent;
     color: white;
     font-weight: 700;
+    width: 63%;
     &:focus {
       outline: none;
     }
   }
+  input[readonly=""] {
+    user-select: none;
+    cursor: pointer;
+  }
+  input::selection {
+    background-color: #c9ecb7;
+  }
+
   input[type="text"]:focus {
+    padding-left: 0.8rem;
     border: 0.2rem solid #c9ecb7;
   }
+  #task {
+    background-color: #1c2531;
+    padding: 1rem;
+    &::placeholder {
+      color: #eeeeee;
+    }
+  }
   input[type="checkbox"] {
-    /* position: absolute; */
-    top: 1.2rem;
-    left: 1rem;
     appearance: none;
     cursor: pointer;
     background-color: #fff;
@@ -50,24 +86,28 @@
     border-radius: 0.2em;
     width: 1.8rem;
     height: 1.8rem;
+    margin-left: 1.8rem;
+    transition: 0.3s ease;
     &:checked {
       background-color: #ad95c8;
       & + input {
         color: #ad95c8;
         text-decoration: line-through;
+        transition: 0.5s ease;
       }
     }
   }
   #addTodo {
-    background: radial-gradient(circle,  #f2ecf8,  #D5C0E9, #AD9DBC);
+    font-weight: 900;
+    background: radial-gradient(circle, #b57ca7, #d3aeca, #8f75a6);
     @include textBackground;
     &:hover {
-      background:#f2ecf8;
+      background: #d3aeca;
       @include textBackground;
     }
   }
   #edit {
-    background: radial-gradient(circle, #d0efc1, #B6DBA3, #96d876);
+    background: radial-gradient(circle, #d0efc1, #b6dba3, #96d876);
     @include textBackground;
     &:hover {
       background: #d0efc1;
@@ -75,8 +115,7 @@
     }
   }
   #save {
-    background: radial-gradient(circle, #d0efc1, #B6DBA3, #96d876);
-    margin-left: 1rem;
+    background: radial-gradient(circle, #d0efc1, #b6dba3, #96d876);
     @include textBackground;
     &:hover {
       background: #d0efc1;
@@ -84,8 +123,8 @@
     }
   }
   #supr {
+    margin-left: 3rem;
     background: radial-gradient(circle, #ffaaaa, #d46a6a);
-    margin: 0.5rem 1rem;
     @include textBackground;
     &:hover {
       background: #ffaaaa;
@@ -93,7 +132,7 @@
     }
   }
   #cancel {
-    margin: 0.5rem 1rem;
+    margin-left: 2rem;
     background: radial-gradient(circle, #ffaaaa, #d46a6a);
     @include textBackground;
     &:hover {
